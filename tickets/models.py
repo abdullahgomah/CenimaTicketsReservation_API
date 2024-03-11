@@ -13,8 +13,10 @@ class Movie(models.Model):
         verbose_name = ("Movie")
         verbose_name_plural = ("Movies")
 
-    def __str__(self):
-        return self.name
+    def __str__(self): 
+        return self.movie 
+
+  
 
 class Guest(models.Model):
     name = models.CharField(max_length=30)
@@ -37,4 +39,4 @@ class Reservation(models.Model):
         verbose_name_plural = ("Reservations")
 
     def __str__(self):
-        return self.name
+        return str(self.guest.name)
